@@ -1,9 +1,16 @@
-.container {
-    max-width: 900px;
-    margin: 30px auto;
-    overflow: auto;
-    min-height: 300px;
-    border: 1px solid steelblue;
-    padding: 30px;
-    border-radius: 5px;
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --primary-color: #5DB344;
+    --secondary-color: #A374BD; 
+  }
+
+body {
+    font-family: "Inter", sans-serif;
 }
+.container {
+    max-width: 80%;
+    margin: 30px auto;
+    padding: 30px;    
+}
+
