@@ -1,3 +1,4 @@
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -6,15 +7,19 @@
   }
    
   
-  .header-rigth {
+  .header-right {
     text-transform: uppercase;
-    color: #5DB344;
+    color: var(--primary-color);
     text-decoration: none;   
     /* transition: color 0.3s ease;  PAra animacao */ 
-    
+    font-size: 0.8rem;
+    font-weight: 700 ;
   }
-  .header-rigth a {
-    margin: 0rem 1rem;  
+  .header-right a {
+    margin: 5rem 1rem;     
+  }
+  .header-left a {
+    margin: 0rem 0.5rem; 
   }
    
   .header__left :hover,
