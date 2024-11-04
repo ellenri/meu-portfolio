@@ -1,16 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 :root {
-    --primary-color: #5DB344;
-    --secondary-color: #A374BD; 
-  }
+  --primary-color: #5db344;
+  --secondary-color: #a374bd;
+}
 
 body {
-    font-family: "Inter", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 .container {
-    max-width: 80%;
-    margin: 30px auto;
-    padding: 30px;    
+  max-width: 80%;
+  margin: 30px auto;
+  padding: 30px;
 }
 
+a {
+  text-decoration: none;
+}

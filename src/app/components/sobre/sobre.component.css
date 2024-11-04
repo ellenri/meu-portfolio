@@ -1,0 +1,18 @@
+.container-sobre {
+  /* margin-top: 10rem; */
+
+}
+
+.green-container {
+  background-color: var(--primary-color);
+  width: 1500px;
+  height: 600px;
+}
+
+.white-container {
+  background-color: rgb(204, 35, 35);
+  margin: 0 4rem;
+  margin-top: -20rem;
+
+}
+
