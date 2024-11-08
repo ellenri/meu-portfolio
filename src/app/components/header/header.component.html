@@ -1,17 +1,48 @@
-<header class="header">
-    <div class="header-left">
-        <a href="https://www.linkedin.com/in/ellen-ribeiro-7371811bb/" target="_blank" aria-label="LinkedIn">
-            <img src="assets/linkedin_green.svg" alt="LinkedIn" class="icon">            
-          </a>
-          <a href="https://github.com/ellenri" target="_blank" aria-label="Github">
-            <img src="assets/github_green.svg" alt="GitHub" class="icon">            
-        </a>
-    </div>
+<header class="header" id="header">
+  <button (click) ="toggleSidebar()" class="btn-icon-header">
+    <img src="assets/list.svg" alt="list" class="icon" style="width: 18px" />
+  </button>
+  <div class="header-left">
+    <a
+      href="https://www.linkedin.com/in/ellen-ribeiro-7371811bb/"
+      target="_blank"
+      aria-label="LinkedIn"
+    >
+      <img src="assets/linkedin_green.svg" alt="LinkedIn" class="icon" />
+    </a>
+    <a href="https://github.com/ellenri" target="_blank" aria-label="Github">
+      <img src="assets/github_green.svg" alt="GitHub" class="icon" />
+    </a>
+  </div>
 
-    <div class="header-right">
-        <a>Início</a> 
-        <a>Sobre</a> 
-        <a>Projetos</a> 
-        <a>Contato</a>
-    </div>
+  <div class="header-right" id="navigation-header">
+    <button (click) ="toggleSidebar()" class="btn-icon-header">
+      <img
+        src="assets/exit-x.svg"
+        alt="exit"
+        class="icon"
+        style="width: 18px"
+      />
+    </button>
+    <a>Início</a>
+    <a>Sobre</a>
+    <a>Projetos</a>
+    <a>Contato</a>
+  </div>
 </header>
+
+
+<!-- <script>
+  var header = document.getElementById("header");
+  var navigationHeader = document.getElementById("navigation-header");
+
+  function toggleSidebar() {
+
+    console.log("oi");
+    if(navigationHeader.classList.contains('active'))
+    navigationHeader.classList.remove('active')
+
+    else
+    navigationHeader.classList.add('active')
+  }
+</script> -->

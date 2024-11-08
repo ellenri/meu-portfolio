@@ -1,71 +1,130 @@
 .container {
-    display: flex;
+  display: flex;
 }
 
 .container-presentation {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
 }
 
 .presentation {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  align-items: flex-end;
 }
 
 h1 {
-    color: var(--primary-color);
-    font-size: 5rem;
+  color: var(--primary-color);
+  font-size: 5rem;
+  font-weight: 400;
 }
 
 .presentation-name {
-    margin-top: 5rem;
-    margin-left: 1rem;
-    color: var(--primary-color);
-    font-size: 3rem;
+  margin-left: 1rem;
+  color: var(--primary-color);
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
 .presentation-text {
-    margin-top: 1rem;
-    font-size: 2rem;
-    text-align: justify;
-    padding-right: 12.5rem;
+  margin-top: 4rem;
+  font-size: 1.5rem;
+  text-align: justify;
+  max-width: 21rem;
 }
 
 .presentation-img {
-    width: 50%;
-    display: flex;
-    justify-content: end;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.presentation-bottom{
-    display: flex;
-    flex-direction: row ;
-    margin-top: 7rem;
-    align-items: center;
+.presentation-img-max-width-768px {
+  display: none;
+}
+
+.presentation-bottom {
+  display: flex;
+  flex-direction: row;
+  margin-top: 7rem;
+  align-items: center;
 }
 
 .presentation-bottom button {
-background-color: var(--secondary-color);
-border-radius: 2rem;
-border-color: var(--secondary-color);
-width: 16rem;
-height: 3rem;
-font-size: 1.2rem;
-color: white;
-display: flex;
-justify-content: center;
-align-items: center;
-cursor: pointer
+  background-color: var(--secondary-color);
+  border-radius: 2rem;
+  border-color: var(--secondary-color);
+  width: 16rem;
+  height: 3rem;
+  font-size: 1.2rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 .presentation-bottom img {
-    margin-right: 0.8rem;
-      width: 1.5rem;
-    }
+  margin-right: 0.8rem;
+  width: 1.5rem;
+}
 
-    .presentation-position {
-        margin-left: 5rem ;
-        font-size: 1.2rem;
-        width: 50%;
-     }
+.presentation-position {
+  font-size: 1.2rem;
+  width: 50%;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .container-presentation {
+    width: 100%;
+  }
+  h1 {
+    font-size: 4rem;
+  }
+
+  .presentation-text {
+    margin-top: 0.1rem;
+    font-size: 1.5rem;
+    width: 80%;
+    padding-left: 1.5rem;
+    text-align: start;
+  }
+  .presentation-name {
+    font-size: 1.5rem;
+  }
+  .presentation-bottom {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .presentation-position {
+    width: 100%;
+  }
+
+  .presentation-bottom p {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .presentation-img {
+    display: none;
+  }
+
+  .presentation-img-max-width-768px {
+    display: flex;
+    justify-content: center;
+  }
+
+  .presentation-img-max-width-768px img {
+    width: 90%;
+  }
+}

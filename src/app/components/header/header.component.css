@@ -1,49 +1,82 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
 }
 
-
 .header-right a {
-    margin: 5rem 1rem;
-    text-transform: uppercase;
-    color: var(--primary-color);
-    text-decoration: none;
-    font-size: 0.8rem;
-    font-weight: 700;
-    cursor: pointer
+  margin: 5rem 1rem;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 .header-left a {
-    margin: 0rem 0.5rem;
+  margin: 0rem 0.5rem;
 }
 
 .header-right a::before {
-    transform: scaleX(0);
-    transform-origin: bottom right;
+  transform: scaleX(0);
+  transform-origin: bottom right;
 }
 
 .header-right a:hover::before {
-    transform: scaleX(1);
-    transform-origin: bottom left;
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 .header-right a::before {
-    content: " ";
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    inset: 0 0 0 0;
-    background: var(--secondary-color);
-    z-index: -1;
-    transition: transform .3s ease;
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  inset: 0 0 0 0;
+  background: var(--secondary-color);
+  z-index: -1;
+  transition: transform 0.3s ease;
 }
 
 .header-right a {
-    position: relative
+  position: relative;
 }
+
+.btn-icon-header {
+  display: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .btn-icon-header {
+    display: block;
+  }
+  .header-right {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    background-color: #dac3e7;
+    height: 100%;
+    width: 35vw;
+    animation-duration: 1s;
+    left: -100%;
+  }
+
+  .header-right a {
+    margin: 1.5rem 1rem;
+    font-weight: 900;
+  }
+
+.header-right.active {
+  left: 0;
+}
+}
+
