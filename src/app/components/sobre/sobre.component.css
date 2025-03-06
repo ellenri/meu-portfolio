@@ -3,23 +3,26 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .green-container {
   background-color: var(--primary-color);
   width: 100%;
-  height: 600px;
-  padding-bottom: 4rem;
+  min-height: 400px;
+  padding: 3rem 1rem 4rem;
 }
 
 .white-container {
   background-color: white;
-  margin: 0 3rem;
-  margin-top: -15rem;
+  margin: 0 auto;
+  margin-top: -5rem;
   padding-top: 3rem;
-  width: 80%;
+  width: 90%;
+  max-width: 1200px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
   box-shadow: -1px 7px 9px #e9e9e9;
   border-radius: 13px;
 }
@@ -27,7 +30,7 @@
 .card {
   display: flex;
   flex-direction: column;
-  padding: 0 5rem;
+  padding: 0 2rem 2rem;
 }
 
 .green-container h1 {
@@ -35,26 +38,30 @@
   font-size: 2.2rem;
   display: flex;
   justify-content: center;
-  padding-top: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  text-align: center;
 }
 
 .green-container p {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 200;
   color: white;
   text-align: justify;
-  padding: 0 23rem;
+  padding: 0rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .card img {
   height: 80px;
+  margin: 0 auto;
 }
 
 .card h3 {
   color: var(--primary-color);
   text-align: center;
-  height: 25px;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   width: 100%;
 }
 
@@ -76,5 +83,56 @@
 
 .academic-training,
 .developer {
-  border-right: 1px solid #d3d3d3;
+  border-right: none;
+}
+
+/* Media queries para responsividade */
+@media (max-width: 767px) {
+  .white-container {
+    margin-top: -2rem;
+  }
+  
+  .green-container {
+    padding-bottom: 6rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .green-container {
+    padding: 3rem 2rem 4rem;
+  }
+
+  .green-container p {
+    padding: 0 3rem;
+    font-size: 1.3rem;
+  }
+
+  .card {
+    padding: 0 3rem 2rem;
+  }
+
+}
+
+@media (min-width: 992px) {
+  .green-container p {
+    padding: 0 5rem;
+    font-size: 1.4rem;
+  }
+
+  .academic-training,
+  .developer {
+    border-right: 1px solid #d3d3d3;
+  }
+
+  .white-container {
+    grid-template-columns: repeat(3, 1fr);
+
+  }
+}
+
+@media (min-width: 1200px) {
+  .green-container p {
+    padding: 0 10rem;
+    font-size: 1.5rem;
+  }
 }
