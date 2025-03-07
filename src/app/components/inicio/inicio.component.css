@@ -93,6 +93,8 @@ h1 {
   padding-left: 0.7rem;
   margin-bottom: -20px;
   overflow: hidden;
+  position: relative;
+  z-index: 1;
 }
 
 .greeting-cube {
@@ -101,6 +103,7 @@ h1 {
   height: 100%;
   transform-style: preserve-3d;
   animation: rotate 20s ease-in-out infinite;
+  z-index: 1;
 }
 
 .greeting-face {
