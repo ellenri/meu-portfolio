@@ -13,18 +13,19 @@ export class HeaderComponent {
   constructor() { }
 
   public toggleSidebar() {
-
    var navigationHeader = document.getElementById("navigation-header");
+   var hamburgerBtn = document.getElementById("hamburger-btn");
 
-    if (navigationHeader) {
-
+    if (navigationHeader && hamburgerBtn) {
       if (navigationHeader.classList.contains('active')) {
         navigationHeader.classList.remove('active');
+        hamburgerBtn.style.display = 'block'; // Show hamburger when menu is closed
       } else {
         navigationHeader.classList.add('active');
+        hamburgerBtn.style.display = 'none'; // Hide hamburger when menu is open
       }
     } else {
-      console.error("Elemento com ID 'navigation-header' não encontrado.");
+      console.error("Elemento com ID 'navigation-header' ou 'hamburger-btn' não encontrado.");
     }
   }
 
