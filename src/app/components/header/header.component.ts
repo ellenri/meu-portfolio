@@ -29,4 +29,32 @@ export class HeaderComponent {
     }
   }
 
+  public scrollToElement(elementId: string, event: Event): void {
+    event.preventDefault();
+    
+    // Fechar o menu de navegação se estiver aberto
+    const navigationHeader = document.getElementById("navigation-header");
+    const hamburgerBtn = document.getElementById("hamburger-btn");
+    
+    if (navigationHeader && navigationHeader.classList.contains('active')) {
+      navigationHeader.classList.remove('active');
+      if (hamburgerBtn) {
+        hamburgerBtn.style.display = 'block';
+      }
+    }
+    
+    // Encontrar o elemento alvo
+    const element = document.getElementById(elementId);
+    
+    if (element) {
+      // Rolagem suave para o elemento
+      element.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    } else {
+      console.error(`Elemento com ID '${elementId}' não encontrado.`);
+    }
+  }
+
 }
