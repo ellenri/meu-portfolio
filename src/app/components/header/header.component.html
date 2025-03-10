@@ -24,25 +24,8 @@
         style="width: 18px"
       />
     </button>
-    <a>Início</a>
-    <a>Sobre</a>
-    <a>Projetos</a>
-    <a>Contato</a>
+    <a href="#sobre" (click)="scrollToElement('sobre', $event)">Sobre</a>
+    <a href="#projetos" (click)="scrollToElement('projetos', $event)">Projetos</a>
+    <a href="#contato" (click)="scrollToElement('contato', $event)">Contato</a>
   </div>
 </header>
-
-
-<!-- <script>
-  var header = document.getElementById("header");
-  var navigationHeader = document.getElementById("navigation-header");
-
-  function toggleSidebar() {
-
-    console.log("oi");
-    if(navigationHeader.classList.contains('active'))
-    navigationHeader.classList.remove('active')
-
-    else
-    navigationHeader.classList.add('active')
-  }
-</script> -->
