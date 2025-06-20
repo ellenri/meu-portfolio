@@ -5,79 +5,30 @@
   </div>
 
   <div class="projetos-grid">
-    <div class="projeto-card">
+    <div class="projeto-card" *ngFor="let projeto of visibleProjects">
       <div class="card-content">
         <div class="card-header">
-          <img src="assets/presente-dani.png" alt="Projeto" class="projeto-imagem">
-          <h2>Site de vaquinha online</h2>
+          <img [src]="projeto.imagem" alt="Projeto" class="projeto-imagem">
+          <h2>{{ projeto.titulo }}</h2>
         </div>
         <p class="projeto-descricao">
-          Plataforma de arrecadação coletiva com sistema de doações em tempo real, barra de progresso e geração automática de QR Code PIX. Desenvolvida para facilitar campanhas de financiamento colaborativo.<br><br>
-          <strong>Stack:</strong> React, TypeScript, Vite, Supabase, PIX API
+          {{ projeto.descricao }}<br><br>
+          <strong>Stack:</strong> {{ projeto.stack }}
         </p>
         <div class="card-footer">
-          <a href="https://presente-dani.vercel.app/" class="card-link">
+          <a *ngIf="projeto.links.site" [href]="projeto.links.site" class="card-link">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="12" r="10"></circle>
               <line x1="2" y1="12" x2="22" y2="12"></line>
               <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
             </svg>
           </a>
-          <a href="https://github.com/ellenri/presente_dani" class="card-link">
+          <a [href]="projeto.links.github" class="card-link">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
             </svg>
           </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="projeto-card">
-      <div class="card-content">
-        <div class="card-header">
-          <img src="assets/encontro_noivos_project.png" alt="Projeto" class="projeto-imagem">
-          <h2> Plataforma de Sorteio </h2>
-        </div>
-        <p class="projeto-descricao">
-          Sistema de gestão para encontros matrimoniais com algoritmo de sorteio inteligente que conecta casais de noivos com mentores de forma equilibrada. Interface moderna e responsiva.<br><br>
-          <strong>Stack:</strong> React, TypeScript, Material UI, Supabase, React Router
-        </p>
-        <div class="card-footer">
-          <a href="https://projeto-encontro-noivos.vercel.app/" class="card-link">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"></circle>
-              <line x1="2" y1="12" x2="22" y2="12"></line>
-              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-            </svg>
-          </a>
-          <a href="https://github.com/ellenri/projeto-encontro-noivos" class="card-link">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-            </svg>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="projeto-card">
-      <div class="card-content">
-        <div class="card-header">
-          <img src="assets/siteFran_MArq.png" alt="Projeto" class="projeto-imagem">
-          <h2>Site de Casamento</h2>
-        </div>
-        <p class="projeto-descricao">
-          Website elegante para celebração de casamento com galeria de fotos, informações do evento, confirmação de presença e seção de presentes. Design romântico e responsivo.<br><br>
-          <strong>Stack:</strong> React, Vite, CSS, JavaScript
-        </p>
-        <div class="card-footer">
-          <a href="https://franemarq.vercel.app/" class="card-link">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"></circle>
-              <line x1="2" y1="12" x2="22" y2="12"></line>
-              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-            </svg>
-          </a>
-          <a href="https://github.com/ellenri/site_casamento_fran_marq" class="card-link">
+          <a *ngIf="projeto.links.api" [href]="projeto.links.api" class="card-link">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
             </svg>
@@ -88,6 +39,8 @@
   </div>
 
   <div class="mais-trabalhos-container">
-    <button class="mais-trabalhos-btn">mais trabalhos</button>
+    <button class="mais-trabalhos-btn" (click)="loadMoreProjects()">
+      {{ buttonText }}
+    </button>
   </div>
 </div>
